@@ -100,7 +100,7 @@ public class task_custom_adapter extends FirebaseRecyclerAdapter<task_model, tas
                 if(type.toString().equals("gamequiz"))
                 {
                     holder.customcard.setCardBackgroundColor(Color.parseColor("#FFE8F2"));
-                    holder.subjectpic.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.solarsysten));
+                    holder.subjectpic.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.dinosaur));
                 }
                 else
                 {

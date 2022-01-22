@@ -189,9 +189,11 @@ public class dinoassist extends AppCompatActivity {
         } else {
             YoYo.with(Techniques.SlideOutLeft).duration(2000).repeat(0).playOn(fireball);
 //            Toast.makeText(MainActivity.this, "You Lose", Toast.LENGTH_SHORT).show();
+
             ques1.setVisibility(View.GONE);
             ques2.setVisibility(View.GONE);
             ques3.setVisibility(View.VISIBLE);
+
 //
 //            answer1.setVisibility(View.GONE);
 //            answer2.setVisibility(View.GONE);
