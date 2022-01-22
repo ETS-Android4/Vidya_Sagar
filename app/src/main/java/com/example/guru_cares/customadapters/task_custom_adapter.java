@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.guru_cares.R;
 import com.example.guru_cares.activityclass.DashboardActivity;
+import com.example.guru_cares.dinoassist;
 import com.example.guru_cares.modelclass.QuizModal;
 import com.example.guru_cares.modelclass.task_model;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -179,6 +180,9 @@ public class task_custom_adapter extends FirebaseRecyclerAdapter<task_model, tas
                 else if(model.getType().equals("gamequiz"))
                 {
                     Toast.makeText(context, "assignment on developement", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(context, dinoassist.class);
+                    context.startActivity(i);
                 }
 
 
