@@ -1,9 +1,8 @@
-package com.example.guru_cares;
+package com.example.guru_cares.fragmentclass;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -11,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.guru_cares.R;
 import com.example.guru_cares.activityclass.mcard;
 import com.example.guru_cares.timeTable.MainActivityCalendar;
 

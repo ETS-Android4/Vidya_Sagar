@@ -1,4 +1,4 @@
-package com.example.guru_cares;
+package com.example.guru_cares.fragmentclass;
 
 import android.os.Bundle;
 
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.progresviews.ProgressWheel;
+import com.example.guru_cares.R;
 import com.example.guru_cares.customadapters.Attendance_Adapter;
 import com.example.guru_cares.customadapters.Mainviewmodel;
 

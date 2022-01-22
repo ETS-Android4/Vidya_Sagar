@@ -1,4 +1,4 @@
-package com.example.guru_cares;
+package com.example.guru_cares.fragmentclass;
 
 import android.os.Bundle;
 
@@ -21,6 +21,7 @@ import com.example.guru_cares.Fragmentclass.Dmodelview;
 import com.example.guru_cares.Fragmentclass.add_task;
 import com.example.guru_cares.Fragmentclass.addsubject;
 import com.example.guru_cares.Fragmentclass.classroom;
+import com.example.guru_cares.R;
 import com.example.guru_cares.customadapters.home_firebasecustomadapter;
 import com.example.guru_cares.customadapters.task_custom_adapter;
 import com.example.guru_cares.modelclass.model;

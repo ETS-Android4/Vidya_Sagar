@@ -96,6 +96,18 @@ public class task_custom_adapter extends FirebaseRecyclerAdapter<task_model, tas
                 }
 
 
+                if(type.toString().equals("gamequiz"))
+                {
+                    holder.customcard.setCardBackgroundColor(Color.parseColor("#FFE8F2"));
+                    holder.subjectpic.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.solarsysten));
+                }
+                else
+                {
+
+                }
+
+
+
             }
 
             @Override
@@ -160,7 +172,11 @@ public class task_custom_adapter extends FirebaseRecyclerAdapter<task_model, tas
 
 
                 }
-                else
+                else if(model.getType().equals("assignment"))
+                {
+                    Toast.makeText(context, "assignment on developement", Toast.LENGTH_SHORT).show();
+                }
+                else if(model.getType().equals("gamequiz"))
                 {
                     Toast.makeText(context, "assignment on developement", Toast.LENGTH_SHORT).show();
                 }
