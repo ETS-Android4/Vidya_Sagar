@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DDF9FF"
-    tools:context=".fragmentclass.fragment_Admin_Student_Selection">
+    tools:context=".Fragmentclass.fragment_Admin_Student_Selection">
 
     <LinearLayout
         android:layout_width="match_parent"

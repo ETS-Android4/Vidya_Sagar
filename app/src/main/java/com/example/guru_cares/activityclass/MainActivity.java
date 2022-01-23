@@ -10,11 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.guru_cares.fragmentclass.Attendance;
-import com.example.guru_cares.fragmentclass.Dash;
-import com.example.guru_cares.fragmentclass.Home;
+import com.example.guru_cares.Fragmentclass.Attendance;
+import com.example.guru_cares.Fragmentclass.Dash;
+import com.example.guru_cares.Fragmentclass.Home;
 import com.example.guru_cares.R;
-import com.example.guru_cares.fragmentclass.User;
+import com.example.guru_cares.Fragmentclass.User;
 
 public class MainActivity extends AppCompatActivity {
 

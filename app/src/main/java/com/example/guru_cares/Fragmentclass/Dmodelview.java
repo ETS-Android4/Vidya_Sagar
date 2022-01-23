@@ -68,12 +68,50 @@ public class Dmodelview extends Fragment {
 
         TextView enrollglobe = (TextView) v.findViewById(R.id.enrollglobe);
         TextView enrollsolar = (TextView) v.findViewById(R.id.enrollsolar);
+        TextView enrollchemistry = (TextView) v.findViewById(R.id.enrollchemistry);
+
+
+        enrollchemistry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent launchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.DefaultCompany.ChemistryAR");
+                if (launchIntent != null) {
+                    Toast.makeText(getContext(), "Starting Please wait...", Toast.LENGTH_SHORT).show();
+                    startActivity(launchIntent);//null pointer check in case package name was not found
+                }
+                else
+                {
+                    Toast.makeText(getContext(), "Null package name", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+
+        enrollsolar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent launchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.DefaultCompany.SolarSystem");
+                if (launchIntent != null) {
+                    Toast.makeText(getContext(), "Starting Please wait...", Toast.LENGTH_SHORT).show();
+                    startActivity(launchIntent);//null pointer check in case package name was not found
+                }
+                else
+                {
+                    Toast.makeText(getContext(), "Null package name", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
 
         enrollglobe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent launchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.unity.solarsystem_unity");
+                Intent launchIntent = getActivity().getPackageManager().getLaunchIntentForPackage("com.DefaultCompany.Seasons");
                 if (launchIntent != null) {
                     startActivity(launchIntent);//null pointer check in case package name was not found
                 }
