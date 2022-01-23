@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.guru_cares.R;
 import com.example.guru_cares.activityclass.DashboardActivity;
 import com.example.guru_cares.dinoassist;
+import com.example.guru_cares.flyhigh;
 import com.example.guru_cares.modelclass.QuizModal;
 import com.example.guru_cares.modelclass.task_model;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -97,10 +98,20 @@ public class task_custom_adapter extends FirebaseRecyclerAdapter<task_model, tas
                 }
 
 
-                if(type.toString().equals("gamequiz"))
+                if(type.toString().equals("gamequizdrag"))
                 {
                     holder.customcard.setCardBackgroundColor(Color.parseColor("#FFE8F2"));
                     holder.subjectpic.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.dinosaur));
+                }
+                else
+                {
+
+                }
+
+                if(type.toString().equals("gamequizfly"))
+                {
+                    holder.customcard.setCardBackgroundColor(Color.parseColor("#FFE8F2"));
+                    holder.subjectpic.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.birda1));
                 }
                 else
                 {
@@ -177,11 +188,18 @@ public class task_custom_adapter extends FirebaseRecyclerAdapter<task_model, tas
                 {
                     Toast.makeText(context, "assignment on developement", Toast.LENGTH_SHORT).show();
                 }
-                else if(model.getType().equals("gamequiz"))
+                else if(model.getType().equals("gamequizdrag"))
                 {
                     Toast.makeText(context, "assignment on developement", Toast.LENGTH_SHORT).show();
 
                     Intent i = new Intent(context, dinoassist.class);
+                    context.startActivity(i);
+                }
+                else if(model.getType().equals("gamequizfly"))
+                {
+                    Toast.makeText(context, "assignment on developement", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(context, flyhigh.class);
                     context.startActivity(i);
                 }
 
