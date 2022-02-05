@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Vidya"
+        android:text="Edu"
         android:textColor="#0B5460"
         android:textSize="30sp" />
 
@@ -29,7 +29,7 @@
         android:layout_toRightOf="@id/title"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
-        android:text="Sagar"
+        android:text="Buddy"
         android:textColor="#00B8D4"
         android:textSize="30sp" />
 
@@ -40,14 +40,15 @@
         android:layout_height="280dp"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/title"
-        android:id="@+id/schoolbag"
+        android:padding="30dp"
+        android:id="@+id/schoolbags"
         android:layout_centerVertical="true"
-        android:src="@drawable/schoolbag"
+        android:src="@drawable/vr"
         />
 
 
     <TextView
-        android:layout_below="@+id/schoolbag"
+        android:layout_below="@+id/schoolbags"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enroll"
@@ -62,7 +63,7 @@
         android:layout_height="wrap_content"
         android:text="Subject"
         android:id="@+id/head2"
-        android:layout_below="@id/schoolbag"
+        android:layout_below="@id/schoolbags"
         android:layout_toRightOf="@+id/head1"
         android:fontFamily="@font/poppins_bold"
         android:textSize="25sp"
@@ -74,7 +75,7 @@
         android:layout_height="wrap_content"
         android:text="Courses :"
         android:layout_toRightOf="@+id/head2"
-        android:layout_below="@id/schoolbag"
+        android:layout_below="@id/schoolbags"
         android:fontFamily="@font/poppins_bold"
         android:textSize="25sp"
         android:layout_marginLeft="10dp"
@@ -89,7 +90,7 @@
         android:layout_marginLeft="20sp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/poppins"
-        android:text="Vidya Sagar allow's you to enroll on your subject courses with e-learning material"
+        android:text="EduBuddy allow's you to enroll on your subject courses with e-learning material"
         android:textColor="#0B5460"
         android:textSize="18sp" />
 

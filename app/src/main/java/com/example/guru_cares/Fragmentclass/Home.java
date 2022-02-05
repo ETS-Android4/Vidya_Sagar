@@ -1,5 +1,6 @@
 package com.example.guru_cares.Fragmentclass;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,9 @@ import android.widget.TextView;
 import com.example.guru_cares.R;
 import com.example.guru_cares.customadapters.home_firebasecustomadapter;
 import com.example.guru_cares.customadapters.task_custom_adapter;
+import com.example.guru_cares.dinoassist;
+import com.example.guru_cares.flyhigh;
+import com.example.guru_cares.gururewards;
 import com.example.guru_cares.modelclass.model;
 import com.example.guru_cares.modelclass.student_info_model;
 import com.example.guru_cares.modelclass.subject_model;
@@ -96,6 +100,26 @@ public class Home extends Fragment {
 
         //Fetching name and grade from firebase as per its username and userid
 
+        TextView drag = (TextView) v.findViewById(R.id.draggame);
+        TextView bird = (TextView) v.findViewById(R.id.birdgame);
+
+        drag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), dinoassist.class);
+                startActivity(i);
+            }
+        });
+
+
+        bird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), flyhigh.class);
+                startActivity(i);
+            }
+        });
+
         TextView name = (TextView) v.findViewById(R.id.name);
         TextView grade = (TextView) v.findViewById(R.id.grade);
         Bundle bundle = this.getArguments();
@@ -112,8 +136,8 @@ public class Home extends Fragment {
 
         ImageView addtask = v.findViewById(R.id.addtask);
         ImageView addsubject = v.findViewById(R.id.addsubject);
-        TextView header = v.findViewById(R.id.header);
-        TextView headerbutton  = v.findViewById(R.id.headerbutton);
+        //TextView header = v.findViewById(R.id.header);
+        LinearLayout headerbutton  = (LinearLayout) v.findViewById(R.id.bag);
 
         DrawerLayout dr=getActivity().findViewById(R.id.drawerlayout);
         toogle.setOnClickListener(new View.OnClickListener() {
@@ -230,8 +254,8 @@ public class Home extends Fragment {
             String headertext = "Check Your Class";
             String headerbuttontext = "Open Class";
 
-            header.setText(headertext);
-            headerbutton.setText(headerbuttontext);
+            //header.setText(headertext);
+            //headerbutton.setText(headerbuttontext);
 
 
             headerbutton.setOnClickListener(new View.OnClickListener() {
@@ -240,7 +264,7 @@ public class Home extends Fragment {
 
 
                     AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                    Fragment myFragment = new classroom();
+                    Fragment myFragment = new gururewards();
                     //myFragment.setArguments(bundle_addsubject);
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment, myFragment).addToBackStack(null).commit();
 

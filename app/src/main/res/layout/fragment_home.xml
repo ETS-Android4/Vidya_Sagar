@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragmentclass.Home">
 
     <ScrollView
@@ -87,6 +88,7 @@
                         android:textSize="20sp"
                         android:gravity="center_vertical"
                         android:id="@+id/grade"
+                        android:textColor="@color/gray"
                         android:fontFamily="@font/poppins"
                         android:text="Grade - 12TH D"/>
 
@@ -112,7 +114,7 @@
                 android:layout_marginLeft="10dp"
                 android:id="@+id/bag"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/navigation_bar_background"
+                android:background="@drawable/gurucoinsback"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -121,25 +123,36 @@
                     android:orientation="vertical"
                     android:layout_weight="1">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:id="@+id/header"
-                        android:gravity="center"
-                        android:text="Check Your Bag"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/poppins"
-                        android:textStyle="bold"
-                        android:textSize="20sp"/>
+                        android:layout_marginLeft="50dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/coin"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:id="@+id/header"
+                            android:text="100"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textStyle="bold"
+                            android:textSize="25sp"/>
+
+                    </LinearLayout>
 
 
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_gravity="center"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.9"
-                        android:background="@color/white"/>
+
+
+
 
 
                     <TextView
@@ -148,8 +161,8 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:id="@+id/headerbutton"
-                        android:text="Open Bag"
-                        android:textColor="#0B5460"
+                        android:text="Redeem your Guru Coins"
+                        android:textColor="#FFFFFF"
                         android:fontFamily="@font/poppins"
                         android:textStyle="bold"
                         android:textSize="15sp"/>
@@ -164,7 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:src="@drawable/schoolbag"/>
+                    android:src="@drawable/surprise"/>
 
 
 
@@ -197,7 +210,7 @@
                         android:textStyle="bold"
                         android:text="Subjects"
                         android:textColor="#000000"
-                        android:textSize="23sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -242,7 +255,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:id="@+id/mid"
                 android:layout_marginTop="50dp"
                 android:layout_below="@+id/subjects"
@@ -250,7 +263,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_height="100dp"
                     android:background="@drawable/yellowbackground"
                     android:layout_alignParentBottom="true"/>
 
@@ -279,17 +292,18 @@
 
                         </View>
 
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Visualize \n3D Models"
+                            android:text="AR Zone \nVisualize 3D Models"
                             android:layout_weight="1"
                             android:padding="20dp"
-                            android:fontFamily="@font/poppins"
+                            android:fontFamily="@font/poppins_bold"
                             android:textStyle="bold"
-                            android:textSize="17sp"
+                            android:textSize="15sp"
                             android:gravity="center"
-                            android:textColor="#7E0B0B" />
+                            android:textColor="#FFFFFF" />
 
                     </LinearLayout>
 
@@ -328,11 +342,204 @@
 
             </RelativeLayout>
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/mid"
+                android:layout_marginTop="50dp"
+                android:id="@+id/guruspcl"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="EduBuddy Special"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins"
+                        android:textStyle="bold"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Show All"
+                        android:gravity="right"
+                        android:textSize="15sp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/poppins">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp">
+
+                <LinearLayout
+                    android:layout_width="220dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/_recycle"
+                    android:layout_height="220dp"
+                    android:layout_weight="1"
+                    >
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="200dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/customcard"
+                            android:layout_marginTop="10dp"
+                            app:cardBackgroundColor="#DDF9FF"
+                            android:layout_marginRight="20dp"
+                            android:layout_margin="10dp"
+                            android:layout_height="220dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/dinobgrs"
+                                android:orientation="vertical"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/dinosaur"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/yellowdrag"/>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/draggame"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/poppins"
+                                    android:textStyle="bold"
+                                    android:layout_margin="20dp"
+                                    android:background="@drawable/yellowbackground"
+                                    android:textSize="15sp"
+                                    android:gravity="center"
+                                    android:textColor="#9A0000"
+                                    android:text="Dino's Math"/>
+
+
+
+
+
+
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="200dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/birdcard"
+                            android:layout_marginTop="10dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="#DDF9FF"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="220dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/background"
+                                android:orientation="vertical"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:padding="10dp"
+                                    android:src="@drawable/lvbrds"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:id="@+id/birdgame"
+                                    android:fontFamily="@font/poppins"
+                                    android:textStyle="bold"
+                                    android:layout_margin="20dp"
+                                    android:background="@drawable/lightbluebackground"
+                                    android:textSize="15sp"
+                                    android:gravity="center"
+                                    android:textColor="#00414A"
+                                    android:text="Fly with CS"/>
+
+
+
+
+
+
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/guruspcl"
                 android:layout_marginTop="50dp"
                 android:id="@+id/quiz"
                 android:layout_marginLeft="10dp"
@@ -349,7 +556,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Pending Task's"
-                        android:textSize="23sp"
+                        android:textSize="20sp"
                         android:layout_weight="1"
                         android:fontFamily="@font/poppins"
                         android:textStyle="bold"

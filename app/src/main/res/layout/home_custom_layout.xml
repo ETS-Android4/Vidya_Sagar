@@ -49,6 +49,7 @@
                 android:fontFamily="@font/poppins"
                 android:textSize="15sp"
                 android:gravity="center"
+                android:textColor="@color/gray"
                 android:text="- Teacher Name"/>
 
             <TextView

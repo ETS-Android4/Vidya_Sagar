@@ -16,8 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="48sp"
-        android:text="Chidya Maar Quiz!"
+        android:text="Fly High"
         android:id="@+id/text_view"
+        android:fontFamily="@font/poppins_bold"
         android:textColor="#ffffff"
         android:layout_above="@id/play"
         android:layout_below="@id/highScoreTxt"
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Play"
         android:textSize="64sp"
+        android:fontFamily="@font/poppins_bold"
         android:layout_centerInParent="true"
         android:textColor="#000000"
         android:id="@+id/play"/>
@@ -39,6 +41,7 @@
         android:textColor="#000000"
         android:text="High Score"
         android:id="@+id/highScoreTxt"
+        android:fontFamily="@font/poppins_bold"
         android:layout_margin="16dp"
         android:layout_alignParentRight="true"/>
 
