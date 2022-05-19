@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.guru_cares.R;
@@ -143,11 +144,20 @@ public class addsubject extends Fragment {
 
                 String titlename = subjectname.getText().toString().trim();
 
+                if(titlename.isEmpty())
+                {
+                    Toast.makeText(getContext(), "Fill subject title field", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    subject_model model = new subject_model(titlename, facultyname[0], cardcolors, imageurl, 0);
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference reference = database.getReference().child("schools").child(schoolname).child("100").child("01").child("subjects");
+                    reference.child(titlename).setValue(model);
+                }
 
-                subject_model model = new subject_model(titlename, facultyname[0], cardcolors, imageurl, 0);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference reference = database.getReference().child("schools").child(schoolname).child("100").child("01").child("subjects");
-                reference.child(titlename).setValue(model);
+
+
 
 
             }
